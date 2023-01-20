@@ -1,0 +1,152 @@
+/* estilos generales */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-style: sans-serif;
+}
+body {
+  background-color: rgba(200, 202, 203, 0.358);
+  min-height: 100vh;
+}
+/* margen de lista */
+.navegacion {
+  width: 1200px;
+  margin: 30px auto;
+  background: rgb(9, 9, 9);
+}
+/* solo para los ul, para quitar los puntos de lista  */
+.navegacion ul {
+  list-style: none;
+}
+/* solo para los li  */
+.menu > li {
+  position: relative;
+  display: inline-block;
+}
+/* para los botones  */
+.menu > li > a {
+  display: block;
+  padding: 15px 20px;
+  color: rgb(72, 179, 179);
+  text-decoration: none;
+}
+/* color cuando pisa letras */
+.menu li a:hover {
+  color: rgb(63, 8, 203);
+}
+
+/* submenu fondo */
+.submenu {
+  position: absolute;
+  background: rgb(9, 9, 9);
+  width: 100%;
+  display: none;
+}
+/* colores y tamaño submenu */
+.submenu li a {
+  display: block;
+  padding: 15px;
+  color: rgb(72, 179, 179);
+  text-decoration: none;
+}
+/* para que desaparesca el .submenu */
+.menu li:hover .submenu {
+  display: block;
+}
+/* titulo */
+h1 {
+  font-size: 5em;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+h3 {
+  font-size: 2em;
+  text-align: center;
+  color: white;
+}
+p {
+  font-size: 1.5em;
+  text-align: center;
+}
+/* imagen tamaño y pocision*/
+.ballena {
+  height: 600px;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  background-color: aqua;
+  box-shadow: 1px 5px 25px rgb(109, 87, 239);
+}
+.ballena img {
+  height: 540px;
+  width: 440;
+  padding: 20px 20px;
+}
+.ballena p {
+  width: 540px;
+  height: 440px;
+}
+.explicacion {
+  height: 600px;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+/* video */
+iframe {
+  width: 560px;
+  height: 315px;
+}
+/* Movimiento imagenes y colocarlas una tras otra*/
+.slaider {
+  width: 500px;
+  height: 300px;
+  margin: auto;
+  position: relative;
+  list-style: none;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 0 0 0 10px rgb(18, 241, 222);
+  background-color: rgb(211, 104, 23);
+}
+/* Ancho de imagen y opacidad */
+.slaider img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  opacity: 0%;
+  transition: all 0.7s;
+}
+.slaider input[type="radio"] {
+  display: none;
+}
+/* Para que aparesca solo la imagen seleccionada  */
+.slaider input[type="radio"]:checked ~ img {
+  opacity: 1;
+}
+.slaider input[type="radio"] + label {
+  position: relative;
+  z-index: 50;
+  margin: 10px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.slaider input[type="radio"]:checked + label {
+  background: black;
+  border: 2px solid white;
+}
+.caja {
+  background-color: black;
+}
